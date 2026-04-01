@@ -1,38 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV — Joel Persson</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<nav>
-  <a class="name" href="index.html">Joel Persson</a>
-  <ul>
-    <li><a href="research.html">Research</a></li>
-    <li><a href="service.html">Service</a></li>
-    <li><a href="cv.html" class="active">CV</a></li>
-    <li><a href="mailto:joelpersson@spotify.com">Contact</a></li>
-  </ul>
-</nav>
+:root {
+  --text: #1a1a1a;
+  --muted: #888;
+  --accent: #1a1a1a;
+  --bg: #fafaf8;
+  --max: 680px;
+  --serif: 'Georgia', serif;
+  --sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
-<main>
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  padding: 0 1.5rem;
+}
 
-  <h2>Documents</h2>
+/* NAV */
+nav {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2rem 0 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 
-  <div class="paper">
-    <a class="title" href="https://www.dropbox.com/scl/fi/pj5z3p3qgqy37ifktr8xy/CV_JP.pdf?rlkey=ke26ffwq9c2r41bj5k8135yf3&st=qc5vhkyo&dl=0" target="_blank">Curriculum Vitae (CV)</a>
-    <div class="venue">Full academic CV — publications, talks, teaching, service.</div>
-  </div>
+nav .name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text);
+}
 
-  <div class="paper">
-    <a class="title" href="https://www.dropbox.com/scl/fi/rb0rp422xa8iz4wy9k6lk/JoelPersson_Resume.pdf?rlkey=666sznnnky4uvw2gphgoueq8l&st=v00oqyu3&dl=0" target="_blank">Resume</a>
-    <div class="venue">One-page industry resume.</div>
-  </div>
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
 
-</main>
+nav ul a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.15s;
+}
 
-</body>
-</html>
+nav ul a:hover, nav ul a.active { color: var(--text); }
+
+/* BANNER */
+.banner { width: calc(100% + 3rem); margin-left: -1.5rem; }
+.banner img { width: 100%; height: 280px; object-fit: cover; object-position: center 35%; display: block; }
+.banner-credit { max-width: var(--max); margin: 0.4rem auto 0; font-size: 0.72rem; color: #bbb; text-align: right; letter-spacing: 0.02em; }
+.banner-credit a { color: #bbb; text-decoration: none; }
+.banner-credit em { font-style: italic; }
+
+/* MAIN */
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding-bottom: 6rem;
+}
+
+/* HOME */
+.home-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+  align-items: start;
+  margin-top: 2.5rem;
+}
+
+.home-grid img {
+  width: 140px;
+  height: 170px;
+  object-fit: cover;
+  object-position: top;
+  filter: grayscale(15%);
+}
+
+.bio p { margin-bottom: 1rem; font-size: 0.97rem; }
+.bio p:last-child { margin-bottom: 0; }
+
+.links {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.links a {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+  transition: color 0.15s;
+}
+
+.links a:hover { color: var(--text); }
+
+/* DIVIDER */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2.5rem 0;
+}
+
+/* SECTION HEADINGS */
+h2 {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.6rem;
+}
+
+/* PAPER ENTRIES */
+.paper {
+  margin-bottom: 2rem;
+}
+
+.paper .title {
+  font-family: var(--serif);
+  font-size: 0.97rem;
+  color: var(--text);
+  text-decoration: none;
+  font-style: italic;
+}
+
+.paper .title:hover { text-decoration: underline; }
+
+.paper .authors {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.paper .authors a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+  transition: color 0.15s;
+}
+
+.paper .authors a:hover { color: var(--text); }
+
+.paper .venue {
+  font-size: 0.85rem;
+  color: var(--text);
+  margin-top: 0.1rem;
+}
+
+.paper .extras {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.paper .extras a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1px;
+  transition: color 0.15s;
+}
+
+.paper .extras a:hover { color: var(--text); }
+
+/* NEWS */
+.news-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.88rem;
+}
+
+.news-item .date { color: var(--muted); }
+
+/* RESPONSIVE */
+@media (max-width: 520px) {
+  .home-grid { grid-template-columns: 1fr; }
+  .home-grid img { width: 100px; height: 120px; }
+  nav { flex-direction: column; gap: 1rem; }
+  .banner { width: calc(100% + 3rem); }
+}
