@@ -54,7 +54,7 @@ nav ul a:hover, nav ul a.active { color: var(--text); }
 
 .banner { width: calc(100% + 3rem); margin-left: -1.5rem; margin-top: -0.5rem; }
 .banner img { width: 100%; height: 160px; object-fit: cover; object-position: center 35%; display: block; }
-.banner-credit { max-width: var(--max); margin: 0.3rem auto 0; font-size: 0.62rem; color: #bbb; text-align: left; letter-spacing: 0.02em; }
+.banner-credit { max-width: var(--max); margin: 0.3rem auto 0; padding: 0 1.5rem; font-size: 0.62rem; color: #bbb; text-align: left; letter-spacing: 0.02em; }
 .banner-credit a { color: #bbb; text-decoration: none; }
 .banner-credit em { font-style: italic; }
 
