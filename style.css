@@ -218,6 +218,106 @@ h2 {
 
 .research-page hr { margin: 2.75rem 0 2.25rem; }
 
+.talks-page h2 {
+  color: #555;
+  font-size: 0.78rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0;
+}
+
+.talk-list { margin-bottom: 2.75rem; }
+
+.talk-entry {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  column-gap: 0.75rem;
+  padding: 0.85rem 0;
+}
+
+.talk-date {
+  padding-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.talk-details .title {
+  display: inline-block;
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.talk-details a.title:hover { text-decoration: underline; }
+
+.talk-details .venue {
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.presentation-paper {
+  margin-bottom: 0.65rem;
+  padding-top: 0.85rem;
+}
+
+.presentation-paper .title {
+  display: inline-block;
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  font-style: italic;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.presentation-paper a.title:hover { text-decoration: underline; }
+
+.paper-resource {
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.presentation-list {
+  margin-top: 0.3rem;
+}
+
+.presentation-entry { display: inline; }
+
+.presentation-entry:not(:last-child)::after {
+  content: " \00b7\ ";
+  color: #aaa;
+}
+
+.presentation-date { display: none; }
+
+.presentation-meta {
+  display: inline;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.paper-resource a,
+.presentation-meta a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1px;
+}
+
+.paper-resource a:hover,
+.presentation-meta a:hover { color: var(--text); }
+
+.presentation-kind { color: #666; }
+
 .paper { margin-bottom: 2rem; }
 
 .paper .title {
@@ -315,6 +415,11 @@ h2 {
 @media (max-width: 520px) {
   nav { flex-direction: column; gap: 1rem; }
   nav ul { gap: 1.1rem; flex-wrap: wrap; }
+  .talk-entry {
+    grid-template-columns: 1fr;
+    row-gap: 0.25rem;
+  }
+  .talk-date { padding-top: 0; }
 }
 
 @media (max-width: 700px) {
