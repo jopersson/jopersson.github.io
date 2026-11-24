@@ -318,6 +318,31 @@ h2 {
 
 .presentation-kind { color: #666; }
 
+.service-page h2 {
+  color: #555;
+  font-size: 0.78rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #ddd;
+  margin-top: 2rem;
+  margin-bottom: 0.9rem;
+}
+
+.service-page h2:first-of-type { margin-top: 0; }
+
+.service-page .paper { margin-bottom: 0.85rem; }
+
+.service-page .paper .title {
+  display: inline-block;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.service-page .paper .venue {
+  margin-top: 0.12rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
 .paper { margin-bottom: 2rem; }
 
 .paper .title {
