@@ -183,6 +183,41 @@ h2 {
   margin-bottom: 1.6rem;
 }
 
+.research-page h2 {
+  color: #555;
+  font-size: 0.78rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1.45rem;
+}
+
+.research-page .paper {
+  margin-bottom: 0;
+  padding-bottom: 1.65rem;
+}
+
+.research-page .paper + .paper {
+  padding-top: 1.65rem;
+  border-top: 1px solid #e3e3df;
+}
+
+.research-page .paper .title {
+  display: inline-block;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.research-page .paper .authors { margin-top: 0.3rem; }
+
+.research-page .paper .extras {
+  margin-top: 0.45rem;
+  row-gap: 0.35rem;
+}
+
+.research-page .paper .extras span { flex-basis: 100%; }
+
+.research-page hr { margin: 2.75rem 0 2.25rem; }
+
 .paper { margin-bottom: 2rem; }
 
 .paper .title {
