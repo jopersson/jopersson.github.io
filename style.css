@@ -175,6 +175,13 @@ main.home { max-width: 872px; }
   object-position: center 75%;
 }
 
+.misc-content .misc-photo-caption {
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
 hr {
   border: none;
   border-top: 1px solid #ddd;
