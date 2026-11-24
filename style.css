@@ -119,7 +119,7 @@ main.home { max-width: 872px; }
 
 .profile-identity span {
   color: #666;
-  font-size: 0.75rem;
+  font-size: 0.82rem;
 }
 
 .profile-links {
@@ -135,7 +135,7 @@ main.home { max-width: 872px; }
   align-items: center;
   gap: 0.55rem;
   color: #666;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   line-height: 1.2;
   text-decoration: none;
 }
